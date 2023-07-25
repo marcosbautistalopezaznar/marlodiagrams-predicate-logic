@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marlo Diagram</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <main>
+        <h1>Marlo Diagram Generator</h1>
+        
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        
+        <form method="POST" action="/">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <br><br>
+            <label for="in_predicates">IN Predicates:</label>
+            <input type="text" id="in_predicates" name="in_predicates" required>
+            <br><br>
+            <label for="out_predicates">OUT Predicates:</label>
+            <input type="text" id="out_predicates" name="out_predicates">
+            <br><br><br><br>
+            <input type="submit" value="Generate Diagram">
+        </form><br>
+        <hr>
+        {% if diagram_image %}
+            <h2>Generated Diagram:</h2>
+            <img src="{{ url_for('static', filename='diagram.png') }}" alt="Marlo Diagram">
+
+            {% if predicates %}
+                <h2>Predicates:</h2>
+                <ul>
+                    {% for predicate in predicates %}
+                        <li>{{ predicate }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endif %}
+        <hr>
+        <p><span> Learn more about Marlo Diagrams: </span><a href="https://fersoler.github.io/MarloDiagrams/" target="_blank"> Fersoler</a></p>
+        <p><a href="orcid.org/0000-0001-6931-660X" target="_blank">Marcos Bautista López Aznar</a></p>
+        <p>
+            <img class="logo" src="/static/img/panto.png">
+            <img class="logo" src="/static/img/univ_huelva.png">
+            <img class="logo" src="/static/img/grupo_logica.png">
+            <img class="logo" src="/static/img/ministerio_uni.png">
+        </p>
+    </main>
+</body>
+</html>
