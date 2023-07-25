@@ -1,3 +1,7 @@
+# Installation instructions
+
+To work with this program, simply download it as a 'zip' file and unzip it anywhere on your computer. Then, go into the unzipped folder and double-click on the file with the '.py' extension (MarloDiag.py) and wait for your default browser to open. These instructions include operating systems such as Windows and Mac.
+
 # Instructions for Marlo Diagrams for Predicate Logic
 
 Marlo Diagrams allow for an intuitive and innovative representation of the formal structure of propositions that can be translated into predicate logic with a particular or universal quantifier. In this way, we represent in a single diagram simple sentences like "All men are mortal" or complex ones like "Among the Greeks there are artists, scientists, and discoverers, and only among them are there philosophers who are cynics." To express a proposition, first write a formula in the subject. You can use simple literals like "m" or "¬m" to generate terms like "mammals" and "non-mammals". You can also combine these literals in the subject by their conjunction, for example to refer to "mammals that are not primates" as "m¬p", and you can create disjunctions like "¬m/of" to refer to those who "are not mammals or are oviparous and fly".
