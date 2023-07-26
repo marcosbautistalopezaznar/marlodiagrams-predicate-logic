@@ -39,4 +39,4 @@ jobs:
         pytest
     - name: exec
       run: |
-        python MarloDiag.py
+        python ../MarloDiag.py
