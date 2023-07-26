@@ -184,6 +184,9 @@ def generate_predicates(subject, in_predicates, out_predicates):
 
     return formulas
 
+def diag_text_view(md, textD, numD):
+    return md
+
 def display_marlo(ax, md, numD, textD, theColor='black'):
     LenIn = len(md['in'])
     if 'out' in md and len(md['out']) > 0:
